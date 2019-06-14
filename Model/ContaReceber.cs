@@ -13,6 +13,6 @@ namespace Model
         public decimal Valor;
         public string Tipo;
         public string Descricao;
-        public bool Status;
+        public string Status;
     }
 }
