@@ -14,6 +14,14 @@
     <div> 
         <h1>Lista de Contas a Receber</h1>
     </div>
+    <a href="/contareceber/cadastro">Novo Cadastro</a>
+    <form action="/contareceber/index" method="get">
+
+        <label for="campo-pesquisa">Pesquisa</label>
+        <input type="text" id="campo-pesquisa" name="pesquisa"/>
+
+
+    </form>
 
     <div>
         <table class="tabela">
@@ -36,6 +44,13 @@
                         <td>@ViewBag.ContasReceber[i].Valor</td>
                         <td>@ViewBag.ContasReceber[i].Tipo</td>
                         <td>@ViewBag.ContasReceber[i].Status</td>
+                        <td>
+                            <a href="/contareceber/editar?id=@ViewBag.ContasReceber[i].Id">Editar</a>
+                        </td>
+                        <td>
+                            <a href="/contareceber/apagar?id=@ViewBag.ContasReceber[i].Id">Deletar</a>
+
+                        </td>
                     </tr>
                 }
             </tbody>

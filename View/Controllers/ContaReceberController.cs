@@ -49,7 +49,7 @@ namespace View.Controllers
         {
             ContaReceberRepositorio repositorio = new ContaReceberRepositorio();
             ContaReceber conta = repositorio.ObterPeloId(id);
-            ViewBag.ContaApagar = conta;
+            ViewBag.ContaReceber = conta;
             return View();
         }
 
