@@ -64,7 +64,8 @@ namespace View.Controllers
             conta.Id = id;
             ContaPagarRepositorio repositorio = new ContaPagarRepositorio();
             repositorio.Atualizar(conta);
-            RedirectToAction("Index");
+            return RedirectToAction("Index");
+
         }
     }
 }
