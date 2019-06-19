@@ -30,7 +30,17 @@
 
 	SELECT * FROM contas_pagar;
 
-	CREATE TABLE cliente_pf(
+	CREATE TABLE clientes_pessoa_fisica(
 		id INT PRIMARY KEy IDENTITY(1,1),
 		nome VARCHAR(100),
-		cpf
+		cpf VARCHAR(16),
+		data_nascimento DATETIME2,
+		rg VARCHAR(9),
+		sexo VARCHAR(100),
+		);
+
+	INSERT INTO clientes_pf (nome, cpf, data_nascimento, rg, sexo)
+	VALUES ('Naiara May', '084.915.929.62', '1992-10-18','5226.0747','Feminino');
+
+	SELECT * FROM clientes_pf;
+	
