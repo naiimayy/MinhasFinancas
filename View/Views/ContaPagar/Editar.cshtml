@@ -11,7 +11,55 @@
     <title>Editar</title>
 </head>
 <body>
-    <div> 
-    </div>
+    
+    <form action="contapagar/update" method="post">
+        <label for="campo-nome">Nome</label>
+        <input type="text" name="nome" id="campo-nome"
+               value="@ViewBag.ContaPagar.Nome" />
+
+        <label for="campo-valor">Valor</label>
+        <input type="number" name="nome" id="campo-valor"
+               value="@ViewBag.ContaPagar.Valor" />
+
+        <label for="campo-tipo">Tipo</label>
+        <input type="text" name="tipo" id="campo-tipo" 
+               value="@ViewBag.ContaPagar.Tipo"/>
+
+        <label for="campo-descricao">Descrição</label>
+        <input type="text" name="descricao" id="campo-descricao" 
+               value="@ViewBag.ContaPagar.Descricao"/>
+
+        <label for="campo-status">Status</label>
+        <select name="status">
+            @if(ViewBag.ContaPagar.Status =="pendente")
+            {
+                <option value="pendente" selected="selected">Pendente</option>
+            }
+            else
+            {
+                <option value="pendente">Pendente</option>
+            }
+
+            @if(ViewBag.ContaPagar.Status == "atrasado")
+            {
+                <option value="atrasado" selected="selected">Atrasado</option>
+            }
+            else
+            {
+                <option value="atrasado">Atrasado</option>
+            }
+            @if(ViewBag.ContaPagar.Status == "pago")
+            {
+                <option value="pago" selected="selected">Pago</option>
+            }
+            else
+            {
+                <option value="pago">Pago</option>
+            }
+        </select>
+
+        <button type="submit">Salvar</button>
+
+    </form>
 </body>
 </html>

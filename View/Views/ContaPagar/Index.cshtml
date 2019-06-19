@@ -11,7 +11,50 @@
     <title>Index</title>
 </head>
 <body>
-    <div> 
+    <div>
+        <h1>Lista de contas a pagar</h1>
+    </div>
+    <a href="/contapagar/cadastro">Novo Cadastro</a>
+    <form action="/contareceber/index" method="get">
+
+        <label for="campo-pesquisa">Pesquisa</label>
+        <input type="text" id="campo-pesquisa" name="pesquisa" />
+
+    </form>
+
+    <div>
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                    <th>Status</th>
+                    <th>Acao</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(int i = 0; i < ViewBag.ContasPagar.Count; i++)
+                {
+                    <tr>
+                        <td>@ViewBag.ContasPagar[i].Id</td>
+                        <td>@ViewBag.ContasPagar[i].Nome</td>
+                        <td>@ViewBag.ContasPagar[i].Valor</td>
+                        <td>@ViewBag.ContasPagar[i].Tipo</td>
+                        <td>@ViewBag.ContasPagar[i].Descricao</td>
+                        <td>@ViewBag.ContasPagar[i].Status</td>
+                        <td>
+                            <a href="/contapagar/editar?id=@ViewBag.ContasPagar[i].Id">Editar</a>
+                        </td>
+                        <td>
+                            <a href="/contapagar/apagar?id=@ViewBag.ContasPagar[i].Id">Deletar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
 </body>
 </html>

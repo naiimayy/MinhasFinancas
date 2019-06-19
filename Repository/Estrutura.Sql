@@ -29,3 +29,8 @@
 		   ('Luz', 300.00, 'suprimento', 'mês maio', 'pago');
 
 	SELECT * FROM contas_pagar;
+
+	CREATE TABLE cliente_pf(
+		id INT PRIMARY KEy IDENTITY(1,1),
+		nome VARCHAR(100),
+		cpf
