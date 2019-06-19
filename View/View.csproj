@@ -126,6 +126,9 @@
     <Content Include="Views\ContaPagar\Index.cshtml" />
     <Content Include="Views\ContaPagar\Editar.cshtml" />
     <Content Include="Views\ContaPagar\Cadastro.cshtml" />
+    <Content Include="Views\ClientePessoaFisica\Index.cshtml" />
+    <Content Include="Views\ClientePessoaFisica\Cadastro.cshtml" />
+    <Content Include="Views\ClientePessoaFisica\Editar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -136,7 +139,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\ClientePessoaFisica\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
