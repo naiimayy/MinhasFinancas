@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientePessoaFisicaRepositorio.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="ContaPagarRepositorio.cs" />
     <Compile Include="ContaReceberRepositorio.cs" />
+    <Compile Include="IRepositoryClientePessoaFisica.cs" />
     <Compile Include="IRepositoryContaPagar.cs" />
     <Compile Include="IRepositoryContaReceber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

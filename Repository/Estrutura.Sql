@@ -39,8 +39,8 @@
 		sexo VARCHAR(100),
 		);
 
-	INSERT INTO clientes_pf (nome, cpf, data_nascimento, rg, sexo)
+	INSERT INTO clientes_pessoa_fisica (nome, cpf, data_nascimento, rg, sexo)
 	VALUES ('Naiara May', '084.915.929.62', '1992-10-18','5226.0747','Feminino');
 
-	SELECT * FROM clientes_pf;
+	SELECT * FROM clientes_pessoa_fisica;
 	
