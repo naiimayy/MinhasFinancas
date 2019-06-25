@@ -38,5 +38,33 @@ namespace View.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Apagar (int id)
+        {
+            ClientePessoaFisicaRepositorio repositorio = new ClientePessoaFisicaRepositorio();
+            repositorio.Apagar(id);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Editar (int id)
+        {
+            ClientePessoaFisicaRepositorio repositorio = new ClientePessoaFisicaRepositorio();
+            ClientePessoaFisica cliente = ObterPeloId(id);
+            ViewBag.ClientePessoaFisica = cliente;
+            return View();
+        }
+
+        public ActionResult Update (string nome, string cpf, DateTime dataNascimento, string rg, string sexo)
+        {
+            ClientePessoaFisica cliente = new ClientePessoaFisica();
+            cliente.Nome = nome;
+            cliente.Cpf = cpf;
+            cliente.Data_nascimento = dataNascimento;
+            cliente.Rg = rg;
+            cliente.Sexo = sexo;
+
+            ClientePessoaFisicaRepositorio repositorio = new ClientePessoaFisicaRepositorio();
+            repositorio.Atualizar(cliente);
+            return RedirectToAction("Index");
+        }
     }
 }
