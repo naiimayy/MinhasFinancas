@@ -14,7 +14,7 @@ namespace Repository
         List<ClientePessoaFisica> ObterTodos(string busca);
 
         ClientePessoaFisica ObterPeloId(int id);
-
+         
         bool Atualizar(ClientePessoaFisica cliente);
 
         bool Apagar(int id);
